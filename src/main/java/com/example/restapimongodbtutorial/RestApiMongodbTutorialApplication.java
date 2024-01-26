@@ -15,15 +15,15 @@ public class RestApiMongodbTutorialApplication {
 		SpringApplication.run(RestApiMongodbTutorialApplication.class, args);
 	}
 
-	@Bean
-	public CommandLineRunner commandLineRunner(MerchantRepository merchantRepository) {
-		return args-> {
-			Merchant merchant = Merchant.builder()
-					.name("Starbucks")
-					.merchantType(MerchantType.QR)
-					.build();
-			merchantRepository.insert(merchant);
-		};
-	}
+//	@Bean
+//	public CommandLineRunner commandLineRunner(MerchantRepository merchantRepository) {
+//		return args-> {
+//			Merchant merchant = Merchant.builder()
+//					.name("Starbucks")
+//					.merchantType(MerchantType.QR)
+//					.build();
+//			merchantRepository.insert(merchant);
+//		};
+//	}
 
 }
