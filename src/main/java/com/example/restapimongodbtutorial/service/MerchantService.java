@@ -1,11 +1,18 @@
 package com.example.restapimongodbtutorial.service;
 
 import com.example.restapimongodbtutorial.model.pojo.Merchant;
-import org.springframework.stereotype.Component;
+import com.example.restapimongodbtutorial.repository.MerchantRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Component
-public interface MerchantService {
-    List<Merchant> findAll();
+@Service
+@RequiredArgsConstructor
+public class MerchantService {
+    private final MerchantRepository merchantRepository;
+
+    public List<Merchant> findAll() {
+        return merchantRepository.findAll();
+    }
 }
